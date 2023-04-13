@@ -24,11 +24,11 @@ To view this portfolio, simply open the index.html file in your web browser. The
 
 Deployed website:
 
- https://calzu0821.github.io/
+ https://calzu0821.github.io/portfolio-cristina-alzuri/
 
 Screenshot of refactored code:
 
-![alt text](assets/images) ![alt text](assets/images) ![alt text](assets/images)
+![alt text](assets/images/screenshot-portfolio.png) ![alt text](assets/images/screenshot-portfolio2.png) 
 
 ## Credits
 
