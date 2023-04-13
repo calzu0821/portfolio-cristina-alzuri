@@ -1,25 +1,36 @@
+/*CSS variables styling*/
+:root {
+   --bg-color: whitesmoke; 
+   --box-shadow: gray;
+   --box-content: gray;
+   --font-color: black;
+   --font-color-2: gray;
+   --font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   --hover-color: white;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: var(--font-family);
 }
 
 body {
-background-color: whitesmoke;
+background-color: var(--bg-color);
 }
 
+/*Nav section*/
 .nav-bar {
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px 0 30px;
-    box-shadow: 0px 0px 10px gray;
+    box-shadow: 0px 0px 10px var(--box-shadow);
 }
 
 .name {
-    color: black;
     font-size: 35px;
     font-weight: bold;
     padding: 15px;
@@ -29,16 +40,16 @@ background-color: whitesmoke;
     margin: 20px;
     text-decoration: none;
     font-size: 25px;
-    color: black;
+    color: var(--font-color);
 }
 
 .nav-bar a:hover {
-    color: white;
+    color: var(--hover-color);
 }
 
 h1 {
     padding: 20px;
-    color: gray;
+    color: var(--font-color-2);
 }
 
 .subtitle {
@@ -56,7 +67,7 @@ header p {
     margin-top: 10px;
 }
 
-
+/*Avatar Image section*/
 figure {
     display: flex;
     justify-content: center;
@@ -78,7 +89,7 @@ figure {
     padding: 30px;
     margin: 10px;
     border-radius: 20px;
-    box-shadow: 0 0 15px gray;
+    box-shadow: 0 0 15px var(--box-shadow);
 }
 
 .about-me-title {
@@ -108,7 +119,7 @@ figure {
     padding: 30px;
     margin: 10px;
     border-radius: 20px;
-    box-shadow: 0 0 15px gray;
+    box-shadow: 0 0 15px var(--box-shadow);
 }
 
 .projects-title {
@@ -129,7 +140,7 @@ figure {
 .project{
     width: 400px;
     height: 400px;
-    background-color: gray;
+    background-color: var(--box-content);
     border-radius: 50px;
 }
 
@@ -139,7 +150,11 @@ figure {
     position: relative;
     top: 360px;
     left: 140px;
-    color: black;
+    color: var(--font-color);
+}
+
+.project a:hover {
+    color: var(--hover-color);
 }
 
 .project img {
@@ -157,7 +172,7 @@ figure {
 .coming-soon {
     width: 300px;
     height: 300px;
-    background-color: gray;
+    background-color: var(--box-content);
     border-radius: 50px;
     margin-left: 100px;
 }
@@ -168,7 +183,11 @@ figure {
     position: relative;
     top: 260px;
     left: 105px;
-    color: black;
+    color: var(--font-color);
+}
+
+.coming-soon a:hover {
+    color: var(--hover-color);   
 }
 
 .coming-soon img {
@@ -192,7 +211,7 @@ figure {
     padding: 10px;
     margin: 10px;
     border-radius: 20px;
-    box-shadow: 0 0 15px gray;
+    box-shadow: 0 0 15px var(--box-shadow);
 }
 
 .contact-me-title {
@@ -205,13 +224,201 @@ figure {
 .contact-me-content a {
     margin-left: 20px;
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
     font-size: 20px;
     padding: 160px;
 }
 
+.contact-me-content a:hover {
+    color: var(--hover-color);
+}
+
+/*Footer section*/
 footer h3 {
     font-size: 14px;
     text-align: center;
     margin-top: 50px;
 }
+
+/*Media Queries section*/
+  
+  @media (max-width: 600px) {
+    .nav-bar {
+        height: 60px;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      
+      .name {
+        font-size: 25px;
+      }
+      
+      .nav-bar a {
+        margin: 8px;
+        font-size: 20px;
+      }
+      h1 {
+        padding: 10px;
+        font-size: 28px
+      }
+  }
+  
+  @media (max-width: 506px) {
+    .nav-bar {
+        height: 60px;
+        padding: 10px;
+    }
+    
+    .name {
+        font-size: 20px;
+        padding: 10px;
+    }
+    
+    .nav-bar a {
+        margin: 10px;
+        font-size: 15px;
+    }
+    
+    h1 {
+        padding: 10px;
+        font-size: 30px;
+    }
+    
+    .subtitle {
+        margin: 5px;
+        padding: 5px;
+        font-size: 25px;
+    }
+    
+    header p {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    }
+  
+    
+@media (max-width: 1100px) {
+    .nav-bar {
+        height: 60px;
+        padding: 10px 20px;
+    }
+            
+    .name {
+        font-size: 30px;
+    }
+            
+    .nav-bar a {
+        margin: 15px;
+        font-size: 20px;
+    }
+            
+    h1 {
+        padding: 10px;
+    }
+            
+    .subtitle {
+        font-size: 30px;
+        text-align: center;
+    }
+            
+    header p {
+        font-size: 20px;
+    }
+            
+    .avatar {
+        height: 150px;
+        width: 150px;
+    }
+            
+    .about-me-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+            
+    .about-me-title {
+        font-size: 20px;
+        padding: 10px;
+    }
+            
+    .about-me-content {
+        font-size: 16px;
+        margin: 10px;
+    }
+            
+    .projects-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      
+      .projects-title {
+        font-size: 20px;
+        padding: 10px;
+      }
+      
+      .projects-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+      }
+      
+      .project {
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+      }
+      
+      .project a {
+        font-size: 16px;
+        top: 240px;
+        left: 90px;
+      }
+      
+      .project img {
+        height: 280px;
+        width: 280px;
+        bottom: 280px;
+        right: 85px;
+      }
+      
+      .coming-soon {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+      
+      .coming-soon a {
+        font-size: 16px;
+        top: 140px;
+        left: 55px;
+      }
+      
+      .coming-soon img {
+        height: 120px;
+        width: 120px;
+        bottom: 135px;
+        left: -25px; 
+      }
+      
+      .contact-me-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+      
+      .contact-me-title {
+        font-size: 20px;
+      }
+      
+      .contact-me-content a {
+        font-size: 18px;
+        padding: 0;
+      }
+      
+      footer h3 {
+        font-size: 12px;
+        margin-top: 30px;
+      }
+    }
+    
