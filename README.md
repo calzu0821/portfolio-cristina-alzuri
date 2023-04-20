@@ -26,7 +26,7 @@ Deployed website:
 
  https://calzu0821.github.io/portfolio-cristina-alzuri/
 
-Screenshot of refactored code:
+Screenshot of the portfolio website:
 
 ![alt text](assets/images/screenshot-portfolio.png) ![alt text](assets/images/screenshot-portfolio2.png) 
 
